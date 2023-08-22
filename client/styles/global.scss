@@ -1,0 +1,7 @@
+@use 'variables' as variables;
+@use 'mixin/media' as media;
+
+
+@import '~normalize.css/normalize.css';
+
+@import 'parts/reset';

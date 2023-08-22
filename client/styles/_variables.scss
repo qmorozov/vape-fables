@@ -1,0 +1,28 @@
+@use 'sass:math' as math;
+
+/* ==== pxl to rem ==== */
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+/* ==== Mixin ==== */
+$breakpoints: (
+  'mobile': (
+    max-width: rem(800px),
+  ),
+  'tablet': (
+    min-width: rem(801px),
+  ),
+  'laptop': (
+    min-width: rem(1280px),
+  ),
+  'desktop': (
+    min-width: rem(1920px),
+  ),
+) !default;
+
+/* ==== Colors ==== */
+
+/* ==== Animation ==== */
+
+$transition: 0.3s ease-in-out;

@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 import { getDirection, messages } from '../localeUtils';
 
-import '../styles/globals.scss';
+import '../styles/global.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   const { locale } = useRouter();
