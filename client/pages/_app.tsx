@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 import { getDirection, messages } from '../localeUtils';
+import { ThemeProvider } from 'next-themes';
 
 import '../styles/global.scss';
 
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
-      <Component {...pageProps} dir={getDirection(locale)} />
+      <ThemeProvider>
+        <Component {...pageProps} dir={getDirection(locale)} />
+      </ThemeProvider>
     </IntlProvider>
   );
 }
