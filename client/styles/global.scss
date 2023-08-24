@@ -1,7 +1,20 @@
 @use 'variables' as variables;
 @use 'mixin/media' as media;
 
-
 @import '~normalize.css/normalize.css';
 
 @import 'parts/reset';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
